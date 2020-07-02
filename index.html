@@ -1,4 +1,5 @@
-<?php
+<html>
+  <?php
 
 // Valid PHP Version?
 $minPHPVersion = '7.2';
@@ -32,13 +33,9 @@ require $pathsPath;
 $paths = new Config\Paths();
 
 // Location of the framework bootstrap file.
-$app = require rtrim($paths->systemDirectory, '/ ') . '/bootstrap.php';
-
-/*
- *---------------------------------------------------------------
- * LAUNCH THE APPLICATION
- *---------------------------------------------------------------
- * Now that everything is setup, it's time to actually fire
- * up the engines and make this app do its thang.
- */
-$app->run();
+$app = require rtrim($paths->systemDirectory, '/ ') . '/bootstrap.php'; /*
+  *--------------------------------------------------------------- * LAUNCH THE
+  APPLICATION *--------------------------------------------------------------- *
+  Now that everything is setup, it's time to actually fire * up the engines and
+  make this app do its thang. */ $app->run();
+</html>
