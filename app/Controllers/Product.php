@@ -37,10 +37,12 @@ class Product extends BaseController
     {
         $data = [
             'product_name' => $this->request->getPost('product_name'),
-            'product_description' => $this->request->getPost('product_description')
+            'product_description' => $this->request->getPost('product_description'),
+            'created_at' => $this->request->getPost('created_at')
         ];
 
         $this->ProductModel->insert_product($data);
+        session()->setFlashdata('success', 'Data berhasil ditambahkan');
         return redirect()->to(base_url('product'));
     }
 }

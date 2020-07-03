@@ -9,7 +9,7 @@ class ProductModel extends Model
 
     public function get_product()
     {
-        return $this->db->table('komik')->get()->getResultArray();
+        return $this->db->table('product')->get()->getResultArray();
     }
 
     public function insert_product($data)

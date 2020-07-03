@@ -9,6 +9,7 @@
         <!-- /.card-header -->
         <!-- form start -->
         <form role="form" action="<?= base_url('product/save'); ?>" method="POST">
+            <?= csrf_field(); ?>
             <div class="card-body">
                 <div class="form-group">
                     <label>Product Name</label>
@@ -20,9 +21,9 @@
                     <input type="text" class="form-control" name="product_description" placeholder="Product Description" required>
                 </div>
 
-                <div class="form-group">
-                    <!-- <label for="customFile">Custom File</label> -->
-                    <label>File input</label>
+                <!-- <div class="form-group"> -->
+                <!-- <label for="customFile">Custom File</label> -->
+                <!-- <label>File input</label>
                     <div class="input-group">
                         <div class="custom-file">
                             <input type="file" class="custom-file-input" name="sampul" id="customFile">
@@ -32,7 +33,7 @@
                             <span class="input-group-text" id="">Upload</span>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
 
 
