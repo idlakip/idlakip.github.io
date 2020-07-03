@@ -8,7 +8,7 @@ class Home extends BaseController
 	{
 		$data = [
 			'title' => 'Home',
-			'isi' => 'v_home'
+			'isi' => 'v/v_home'
 		];
 		echo view('layout/v_wrapper', $data);
 	}
@@ -18,7 +18,7 @@ class Home extends BaseController
 	{
 		$data = [
 			'title' => 'Halaman 2',
-			'isi' => 'v_halaman2'
+			'isi' => 'v/v_halaman2'
 		];
 		echo view('layout/v_wrapper', $data);
 	}
@@ -29,7 +29,7 @@ class Home extends BaseController
 	{
 		$data = [
 			'title' => 'Halaman 3',
-			'isi' => 'v_halaman3'
+			'isi' => 'v/v_halaman3'
 		];
 		echo view('layout/v_wrapper', $data);
 	}
@@ -40,7 +40,7 @@ class Home extends BaseController
 	{
 		$data = [
 			'title' => 'Halaman 4',
-			'isi' => 'v_halaman4'
+			'isi' => 'v/v_halaman4'
 		];
 		echo view('layout/v_wrapper', $data);
 	}
@@ -51,7 +51,7 @@ class Home extends BaseController
 	{
 		$data = [
 			'title' => 'Halaman 5',
-			'isi' => 'v_halaman5'
+			'isi' => 'v/v_halaman5'
 		];
 		echo view('layout/v_wrapper', $data);
 	}
@@ -62,7 +62,7 @@ class Home extends BaseController
 	{
 		$data = [
 			'title' => 'Halaman 6',
-			'isi' => 'v_halaman6'
+			'isi' => 'v/v_halaman6'
 		];
 		echo view('layout/v_wrapper', $data);
 	}

@@ -14,16 +14,16 @@
                 <a href="<?= base_url('home/halaman2') ?>"><i class="fa fa-desktop"></i> Halaman 2</a>
             </li>
             <li>
-                <a href="<?= base_url('home/halaman3') ?>"><i class="fa fa-qrcode"></i> Halaman 3</a>
+                <a href="<?= base_url('home/halaman3') ?>"><i class="fa fa-qrcode"></i> Tabs & Panels</a>
             </li>
             <li>
-                <a href="<?= base_url('home/halaman4') ?>"><i class="fa fa-bar-chart-o"></i> Halaman 4</a>
+                <a href="<?= base_url('pages') ?>"><i class="fa fa-bar-chart-o"></i> Pages</a>
             </li>
             <li>
-                <a href="<?= base_url('home/halaman5') ?>"><i class="fa fa-table"></i> Halaman 5</a>
+                <a href="<?= base_url('pages/pages2') ?>"><i class="fa fa-table"></i> Pages 2</a>
             </li>
             <li>
-                <a href="<?= base_url('home/halaman6') ?>"><i class="fa fa-edit"></i> Forms </a>
+                <a href="<?= base_url('pages/pages3') ?>"><i class="fa fa-edit"></i> Forms 3</a>
             </li>
 
 
