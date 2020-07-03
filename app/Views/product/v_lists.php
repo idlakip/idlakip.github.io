@@ -1,5 +1,5 @@
 <div class="col-sm-12">
-    <a href="" class="btn btn-sm btn-primary my-3">Tambah Data</a>
+    <a href="<?= base_url('product/tambah'); ?>" class="btn btn-sm btn-primary my-3">Tambah Data</a>
     <table id="example1" class="table table-bordered table-striped">
         <thead>
             <tr>

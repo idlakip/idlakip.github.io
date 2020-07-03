@@ -23,4 +23,24 @@ class Product extends BaseController
         ];
         echo view('layout/m_wrapper', $data);
     }
+
+    public function tambah()
+    {
+        $data = [
+            'title' => 'Tambah Data Product',
+            'isi' => 'product/v_add'
+        ];
+        echo view('layout/m_wrapper', $data);
+    }
+
+    public function save()
+    {
+        $data = [
+            'product_name' => $this->request->getPost('product_name'),
+            'product_description' => $this->request->getPost('product_description')
+        ];
+
+        $this->ProductModel->insert_product($data);
+        return redirect()->to(base_url('product'));
+    }
 }
