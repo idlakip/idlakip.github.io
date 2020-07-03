@@ -59,6 +59,22 @@
                            </p>
                        </a>
                    </li>
+                   <li class="nav-item">
+                       <a href="<?= base_url('pages/menu4') ?>" class="nav-link">
+                           <i class="nav-icon fas fa-th"></i>
+                           <p>
+                               Menu 4
+                           </p>
+                       </a>
+                   </li>
+                   <li class="nav-item">
+                       <a href="<?= base_url('product') ?>" class="nav-link">
+                           <i class="nav-icon fas fa-th"></i>
+                           <p>
+                               Product
+                           </p>
+                       </a>
+                   </li>
                </ul>
            </nav>
            <!-- /.sidebar-menu -->

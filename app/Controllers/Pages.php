@@ -79,5 +79,15 @@ class Pages extends BaseController
     }
 
     //--------------------------------------------------------------------
+    public function menu4()
+    {
+        $data = [
+            'title' => 'Product',
+            'isi' => 'menu/n_menu4'
+        ];
+        echo view('layout/m_wrapper', $data);
+    }
+
+    //--------------------------------------------------------------------
 
 }
