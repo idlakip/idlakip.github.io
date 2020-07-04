@@ -35,9 +35,14 @@
 <!-- page script -->
 <script>
     $(function() {
-        $("#example1").DataTable({
+        $("#tabeldata").DataTable({
             "responsive": true,
-            "autoWidth": false,
+            "autoWidth": true,
+
+
+
+
+
         });
         $('#example2').DataTable({
             "paging": true,

@@ -1,5 +1,5 @@
 <div class="col-sm-12">
-    <table id="example1" class="table table-bordered table-striped">
+    <table id="tabeldata" class="table table-bordered table-striped">
         <thead>
             <tr>
                 <th>No.</th>
