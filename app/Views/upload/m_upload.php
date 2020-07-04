@@ -1,4 +1,5 @@
 <div class="col-sm-12">
+    <a href="<?= base_url('upload/gallery'); ?>" class="btn btn-sm btn-primary my-3">Lihat Data Gallery</a>
     <!-- left column -->
     <!-- <div class="col-md-6"> -->
     <!-- general form elements -->
@@ -10,16 +11,7 @@
             ?>
         </div>
     <?php } ?>
-    <!-- Jika Gagal -->
-    <?php
-    $errors->$validation->getErrors();
-    if (!empty($errors)) { ?>
-        <div class="alert alert-danger">
-            <?php
-            echo $validation->listError();
-            ?>
-        </div>
-    <?php } ?>
+
     <div class="card card-primary">
         <div class="card-header">
             <h3 class="card-title">Upload Gambar</h3>
@@ -90,7 +82,9 @@
                     </td>
 
                     <td><?= $value['ket']; ?></td>
-                    <td><?= $value['gambar']; ?></td>
+                    <td>
+                        <img src="<?= base_url('folder_upload/' . $value['gambar']); ?>" alt="" class="sampul">
+                    </td>
 
                     <td>
                         <a href="<?= base_url('upload/edit/' . $value['id']); ?>" class="btn btn-sm btn-warning">Edit</a>

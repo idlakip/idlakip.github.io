@@ -26,6 +26,16 @@ class Upload extends BaseController
         ];
         echo view('layout/m_wrapper', $data);
     }
+    public function gallery()
+    {
+        $data = [
+            'title'      => 'Gallery Upload Gambar',
+            'dataupload' => $this->UploadModel->get_upload(),
+            // 'validation' => $this->validator,
+            'isi'        => 'upload/m_gallery'
+        ];
+        echo view('layout/m_wrapper', $data);
+    }
 
     public function save()
     {
@@ -41,7 +51,7 @@ class Upload extends BaseController
             return $this->index();
         } else {
             $file_gambar = $this->request->getFile('gambar');
-            $file_gambar->move(ROOTPATH . 'public/upload');
+            $file_gambar->move(ROOTPATH . 'public/folder_upload');
 
             $data = [
                 'ket' => $this->request->getPost('ket'),

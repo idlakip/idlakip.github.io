@@ -28,6 +28,8 @@
 <script src="<?= base_url() ?>/templates/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
 <script src="<?= base_url() ?>/templates/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
 <script src="<?= base_url() ?>/templates/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<!-- Ekko Lightbox -->
+<script src="<?= base_url() ?>/templates/plugins/ekko-lightbox/ekko-lightbox.min.js"></script>
 <!-- AdminLTE App -->
 <script src="<?= base_url() ?>/templates/dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
@@ -54,6 +56,24 @@
             "responsive": true,
         });
     });
+</script>
+<script>
+    $(function() {
+        $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+            event.preventDefault();
+            $(this).ekkoLightbox({
+                alwaysShowClose: true
+            });
+        });
+
+        $('.filter-container').filterizr({
+            gutterPixels: 3
+        });
+        $('.btn[data-filter]').on('click', function() {
+            $('.btn[data-filter]').removeClass('active');
+            $(this).addClass('active');
+        });
+    })
 </script>
 </body>
 
