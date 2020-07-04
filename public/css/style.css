@@ -3,6 +3,6 @@
   height: 100px;
 }
 
-.table > tbody > tr > * {
+.card-body > table > tbody > tr > * {
   vertical-align: middle;
 }

@@ -4,7 +4,7 @@
     <!-- <div class="col-md-6"> -->
     <!-- general form elements -->
     <!-- Jika berhasil -->
-    <?php if (!empty(session()->getFlashdata('succsess'))) { ?>
+    <?php if (!empty(session()->getFlashdata('success'))) { ?>
         <div class="alert alert-success">
             <?php
             echo session()->getFlashdata('success');
@@ -23,7 +23,7 @@
         <div class="card-body">
 
             <div class="form-group">
-                <label>Keterangan</label>
+                <label>Nama</label>
                 <input type="text" class="form-control" name="ket" placeholder="Keterangan" required>
             </div>
 
@@ -33,25 +33,7 @@
                 <!-- <input type="file" class="form-control" name="file_upload" required> -->
             </div>
 
-            <!-- <div class="form-group"> -->
-            <!-- <label for="customFile">Custom File</label> -->
-            <!-- <label>File input</label>
-                    <div class="input-group">
-                        <div class="custom-file">
-                            <input type="file" class="custom-file-input" name="sampul" id="customFile">
-                            <label class="custom-file-label" for="customFile"></label>
-                        </div>
-                        <div class="input-group-append">
-                            <span class="input-group-text" id="">Upload</span>
-                        </div>
-                    </div>
-                </div> -->
 
-
-            <!-- <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                </div> -->
         </div>
         <!-- /.card-body -->
 
@@ -67,7 +49,7 @@
         <thead>
             <tr>
                 <th>No.</th>
-                <th>Keterangan</th>
+                <th>Nama</th>
                 <th>Gambar</th>
 
                 <th>Action</th>
@@ -75,20 +57,23 @@
         </thead>
         <tbody>
             <?php $no = 1;
-            foreach ($dataupload as $key => $value) { ?>
+            foreach ($upload as $key => $u) { ?>
                 <tr>
                     <td>
                         <?= $no++; ?>
                     </td>
 
-                    <td><?= $value['ket']; ?></td>
+                    <td><?= $u['ket']; ?></td>
                     <td>
-                        <img src="<?= base_url('folder_upload/' . $value['gambar']); ?>" alt="" class="sampul">
+                        <a href="<?= base_url('folder_upload/' . $u['gambar']); ?>" data-toggle="lightbox" data-title="<?= $u['ket']; ?>" data-gallery="gallery">
+
+                            <!-- <img src="#" alt="white sample" class="sampul"> -->
+                            <img src="<?= base_url('folder_upload/' . $u['gambar']); ?>" class="img-fluid mb-2 sampul" alt="" />
                     </td>
 
                     <td>
-                        <a href="<?= base_url('upload/edit/' . $value['id']); ?>" class="btn btn-sm btn-warning">Edit</a>
-                        <a href="<?= base_url('upload/delete/' . $value['id']); ?>" class="btn btn-sm btn-danger" onclick="return confirm('Apakah anda yakin??')">Delete</a>
+                        <a href="<?= base_url('upload/edit/' . $u['id']); ?>" class="btn btn-sm btn-warning">Edit</a>
+                        <!-- <a href="<?= base_url('upload/delete/' . $u['id']); ?>" class="btn btn-sm btn-danger" onclick="return confirm('Apakah anda yakin??')">Delete</a> -->
                     </td>
                 </tr>
             <?php } ?>

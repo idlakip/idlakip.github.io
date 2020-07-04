@@ -18,4 +18,14 @@ class UploadModel extends Model
     {
         return $this->db->table('tbl_upload')->insert($data);
     }
+
+    public function edit_upload($id)
+    {
+        return $this->db->table('tbl_upload')->where('id', $id)->get()->getRowArray();
+    }
+
+    public function update_upload($data, $id)
+    {
+        return $this->db->table('tbl_upload')->update($data, array('id' => $id));
+    }
 }

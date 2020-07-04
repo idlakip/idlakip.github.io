@@ -20,12 +20,24 @@ class Upload extends BaseController
     {
         $data = [
             'title'      => 'Upload Gambar',
-            'dataupload' => $this->UploadModel->get_upload(),
+            'upload' => $this->UploadModel->get_upload(),
             'validation' => $this->validator,
             'isi'        => 'upload/m_upload'
         ];
         echo view('layout/m_wrapper', $data);
     }
+
+    public function edit($id)
+    {
+        $data = [
+            'title'      => 'Edit Gambar',
+            'upload' => $this->UploadModel->edit_upload($id),
+            'validation' => $this->validator,
+            'isi'        => 'upload/m_edit'
+        ];
+        echo view('layout/m_wrapper', $data);
+    }
+
     public function gallery()
     {
         $data = [
@@ -60,5 +72,18 @@ class Upload extends BaseController
             $this->UploadModel->insert_gambar($data);
             return redirect()->to(base_url('upload'))->with('success', 'Data berhasil di upload!!!');
         }
+    }
+
+    public function update($id)
+    {
+        $data = [
+            'ket'    => $this->request->getPost('ket'),
+            // 'gambar' => $this->request->getPost('gambar')
+
+        ];
+
+        $this->UploadModel->update_upload($data, $id);
+        session()->setFlashdata('success', 'Data Nama berhasil diupdate!!!');
+        return redirect()->to(base_url('upload'));
     }
 }

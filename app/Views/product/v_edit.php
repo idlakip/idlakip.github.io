@@ -20,26 +20,7 @@
                     <input type="text" class="form-control" name="product_description" value="<?= $product['product_description']; ?>" placeholder="Product Description" required>
                 </div>
 
-                <!-- <div class="form-group"> -->
-                <!-- <label for="customFile">Custom File</label> -->
-                <!-- <label>File input</label>
-                    <div class="input-group">
-                        <div class="custom-file">
-                            <input type="file" class="custom-file-input" name="sampul" id="customFile">
-                            <label class="custom-file-label" for="customFile"></label>
-                        </div>
-                        <div class="input-group-append">
-                            <span class="input-group-text" id="">Upload</span>
-                        </div>
-                    </div>
-                </div> -->
 
-
-
-                <!-- <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                </div> -->
             </div>
             <!-- /.card-body -->
 
