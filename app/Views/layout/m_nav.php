@@ -45,7 +45,7 @@
                    </li>
                    <li class="nav-item">
                        <a href="<?= base_url('pages/menu2') ?>" class="nav-link">
-                           <i class="nav-icon fas fa-th"></i>
+                           <i class="nav-icon fas fa-desktop"></i>
                            <p>
                                Menu 2
                            </p>
@@ -53,7 +53,7 @@
                    </li>
                    <li class="nav-item">
                        <a href="<?= base_url('pages/menu3') ?>" class="nav-link">
-                           <i class="nav-icon fas fa-th"></i>
+                           <i class="nav-icon fas fa-user"></i>
                            <p>
                                Menu 3
                            </p>
@@ -69,9 +69,17 @@
                    </li>
                    <li class="nav-item">
                        <a href="<?= base_url('product') ?>" class="nav-link">
-                           <i class="nav-icon fas fa-th"></i>
+                           <i class="nav-icon fa fa-edit"></i>
                            <p>
                                Product
+                           </p>
+                       </a>
+                   </li>
+                   <li class="nav-item">
+                       <a href="<?= base_url('peserta') ?>" class="nav-link">
+                           <i class="nav-icon fas fa-users"></i>
+                           <p>
+                               Peserta
                            </p>
                        </a>
                    </li>
