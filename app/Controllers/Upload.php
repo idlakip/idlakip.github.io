@@ -22,7 +22,7 @@ class Upload extends BaseController
             'title'      => 'Upload Gambar',
             'dataupload' => $this->UploadModel->get_upload(),
             'validation' => $this->validator,
-            'isi'        => 'upload/_upload'
+            'isi'        => 'upload/m_upload'
         ];
         echo view('layout/m_wrapper', $data);
     }
@@ -45,7 +45,7 @@ class Upload extends BaseController
 
             $data = [
                 'ket' => $this->request->getPost('ket'),
-                'gambar' => $file_gambar->getName(),
+                'gambar' => $file_gambar->getName()
             ];
             $this->UploadModel->insert_gambar($data);
             return redirect()->to(base_url('upload'))->with('success', 'Data berhasil di upload!!!');

@@ -1,7 +1,25 @@
-<!-- <div class="col-sm-12"> -->
-<!-- left column -->
-<div class="col-md-12">
+<div class="col-sm-12">
+    <!-- left column -->
+    <!-- <div class="col-md-6"> -->
     <!-- general form elements -->
+    <!-- Jika berhasil -->
+    <?php if (!empty(session()->getFlashdata('succsess'))) { ?>
+        <div class="alert alert-success">
+            <?php
+            echo session()->getFlashdata('success');
+            ?>
+        </div>
+    <?php } ?>
+    <!-- Jika Gagal -->
+    <?php
+    $errors->$validation->getErrors();
+    if (!empty($errors)) { ?>
+        <div class="alert alert-danger">
+            <?php
+            echo $validation->listError();
+            ?>
+        </div>
+    <?php } ?>
     <div class="card card-primary">
         <div class="card-header">
             <h3 class="card-title">Upload Gambar</h3>
@@ -11,6 +29,7 @@
         <!-- <form role="form" action="" method="POST"> -->
         <?= form_open_multipart(base_url('upload/save')); ?>
         <div class="card-body">
+
             <div class="form-group">
                 <label>Keterangan</label>
                 <input type="text" class="form-control" name="ket" placeholder="Keterangan" required>
@@ -35,7 +54,6 @@
                         </div>
                     </div>
                 </div> -->
-
 
 
             <!-- <div class="form-check">
