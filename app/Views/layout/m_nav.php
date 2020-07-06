@@ -35,7 +35,7 @@
                            </li>
                        </ul>
                    </li>
-                   <li class="nav-item">
+                   <!-- <li class="nav-item">
                        <a href="<?= base_url('pages/menu1') ?>" class="nav-link">
                            <i class="nav-icon fas fa-th"></i>
                            <p>
@@ -66,7 +66,7 @@
                                Menu 4
                            </p>
                        </a>
-                   </li>
+                   </li> -->
                    <li class="nav-item">
                        <a href="<?= base_url('product') ?>" class="nav-link">
                            <i class="nav-icon fa fa-edit"></i>
@@ -98,6 +98,14 @@
                            <i class="nav-icon fas fa-upload"></i>
                            <p>
                                Upload
+                           </p>
+                       </a>
+                   </li>
+                   <li class="nav-item">
+                       <a href="<?= base_url('uploads') ?>" class="nav-link">
+                           <i class="nav-icon fas fa-desktop"></i>
+                           <p>
+                               Multi Uploads
                            </p>
                        </a>
                    </li>

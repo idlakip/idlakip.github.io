@@ -10,7 +10,7 @@ class Home extends BaseController
 			'title' => 'Home',
 			'isi' => 'v/v_home'
 		];
-		echo view('layout/v_wrapper', $data);
+		echo view('layout/m_wrapper', $data);
 	}
 
 	//--------------------------------------------------------------------
