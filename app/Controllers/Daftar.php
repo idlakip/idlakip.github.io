@@ -16,7 +16,7 @@ class Daftar extends BaseController
     public function index()
     {
         $data = array(
-            'title' => 'Validation (Input Peserta)',
+            'title' => 'Input Peserta',
             'isi' => 'daftar/m_validation'
         );
         echo view('layout/m_wrapper', $data);

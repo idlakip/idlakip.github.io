@@ -23,7 +23,7 @@
     <?php } ?>
     <div class="card card-primary">
         <div class="card-header">
-            <h3 class="card-title">Form Pendataran</h3>
+            <h3 class="card-title">Form Pendaftaran</h3>
         </div>
         <?= csrf_field(); ?>
         <?= form_open_multipart('daftar/save'); ?>
@@ -31,15 +31,15 @@
 
             <div class="form-group">
                 <label>NRP</label>
-                <input type="text" class="form-control" name="nrp" placeholder="NRP">
+                <input type="text" class="form-control" name="nrp" value="<?= old('nrp'); ?>" placeholder=" NRP">
             </div>
             <div class="form-group">
                 <label>Nama</label>
-                <input type="text" class="form-control" name="nama" placeholder="Nama">
+                <input type="text" class="form-control" name="nama" value="<?= old('nama'); ?>" placeholder=" Nama">
             </div>
             <div class="form-group">
                 <label>Email</label>
-                <input type="email" class="form-control" name="email" placeholder="Email">
+                <input type="email" class="form-control" name="email" value="<?= old('email'); ?>" placeholder=" Email">
             </div>
             <div class="form-group">
                 <label>Photo</label>
