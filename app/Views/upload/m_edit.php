@@ -4,30 +4,25 @@
     <!-- <div class="col-md-6"> -->
     <!-- general form elements -->
     <!-- Jika berhasil -->
-    <?php if (!empty(session()->getFlashdata('success'))) { ?>
-        <div class="alert alert-success">
-            <?php
-            echo session()->getFlashdata('success');
-            ?>
-        </div>
-    <?php } ?>
+     <!-- Jika berhasil -->
 
     <div class="card card-primary">
         <div class="card-header">
             <h3 class="card-title">Edit Nama Gambar</h3>
         </div>
-        <form role="form" action="<?= base_url('upload/update/' . $upload['id']); ?>" method="POST">
+        <?= csrf_field(); ?>
+        <form role="form" action="<?= base_url('upload/update/' . $data['id']); ?>" method="POST">
             <div class="card-body">
 
                 <div class="form-group">
                     <label>Nama Gambar</label>
 
-                    <input type="text" class="form-control" name="ket" value="<?= $upload['ket']; ?>" required>
+                    <input type="text" class="form-control" name="ket" value="<?= (old('ket')) ? old('ket') : $data['ket'] ?>">
                 </div>
-                <!-- <div class="form-group">
-                    <label>Gambar</label>
-                    <input type="file" class="form-control" name="gambar" value="#">
-                </div> -->
+                <div class="form-group">
+                    <label>Gambar tidak dirubah</label>
+                    <input type="text" class="form-control" name="gambar" value="<?= (old('gambar')) ? old('gambar') : $data['gambar'] ?>" disabled>
+                </div>
             </div>
 
             <!-- /.card-body -->

@@ -11,11 +11,22 @@
             ?>
         </div>
     <?php } ?>
+<!-- Jika Upload gagal -->
+<?php
+$errors = $validation->getErrors(); 
+if (!empty($errors)) { ?>
+        <div class="alert alert-danger">
+            <?php
+            echo $validation->listErrors();
+            ?>
+        </div>
+    <?php } ?>
 
     <div class="card card-primary">
         <div class="card-header">
             <h3 class="card-title">Upload Gambar</h3>
         </div>
+        <?= csrf_field(); ?>
         <!-- /.card-header -->
         <!-- form start -->
         <!-- <form role="form" action="" method="POST"> -->
@@ -44,8 +55,8 @@
         <!-- </form> -->
     </div>
     <!-- /.card -->
-
-    <table class="table table-bordered table-striped">
+<table id="tabeldata" class="table table-bordered table-striped">
+    <!-- <table class="table table-bordered table-striped"> -->
         <thead>
             <tr>
                 <th>No.</th>
@@ -57,7 +68,7 @@
         </thead>
         <tbody>
             <?php $no = 1;
-            foreach ($upload as $key => $u) { ?>
+            foreach ($data as $key => $u) { ?>
                 <tr>
                     <td>
                         <?= $no++; ?>

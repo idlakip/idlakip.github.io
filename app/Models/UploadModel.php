@@ -6,8 +6,8 @@ use CodeIgniter\Model;
 
 class UploadModel extends Model
 {
-    protected $table = 'tbl_upload';
-    protected $useTimestamps = true;
+    // protected $table = 'tbl_upload';
+    // protected $useTimestamps = true;
 
     public function get_upload()
     {
