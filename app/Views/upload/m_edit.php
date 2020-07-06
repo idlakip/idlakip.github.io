@@ -4,7 +4,7 @@
     <!-- <div class="col-md-6"> -->
     <!-- general form elements -->
     <!-- Jika berhasil -->
-     <!-- Jika berhasil -->
+    <!-- Jika berhasil -->
 
     <div class="card card-primary">
         <div class="card-header">

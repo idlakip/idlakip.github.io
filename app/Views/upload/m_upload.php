@@ -11,10 +11,10 @@
             ?>
         </div>
     <?php } ?>
-<!-- Jika Upload gagal -->
-<?php
-$errors = $validation->getErrors(); 
-if (!empty($errors)) { ?>
+    <!-- Jika Upload gagal -->
+    <?php
+    $errors = $validation->getErrors();
+    if (!empty($errors)) { ?>
         <div class="alert alert-danger">
             <?php
             echo $validation->listErrors();
@@ -52,11 +52,11 @@ if (!empty($errors)) { ?>
             <button type="submit" class="btn btn-primary">Upload</button>
         </div>
         <?= form_close() ?>
-        <!-- </form> -->
+
     </div>
     <!-- /.card -->
-<table id="tabeldata" class="table table-bordered table-striped">
-    <!-- <table class="table table-bordered table-striped"> -->
+    <table id="tabeldata" class="table table-bordered table-striped">
+        <!-- <table class="table table-bordered table-striped"> -->
         <thead>
             <tr>
                 <th>No.</th>

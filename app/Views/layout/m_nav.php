@@ -76,8 +76,17 @@
                        </a>
                    </li>
                    <li class="nav-item">
-                       <a href="<?= base_url('peserta') ?>" class="nav-link">
+                       <a href="<?= base_url('daftar') ?>" class="nav-link">
                            <i class="nav-icon fas fa-users"></i>
+                           <p>
+                               Input Pendaftar
+                           </p>
+                       </a>
+                   </li>
+
+                   <li class="nav-item">
+                       <a href="<?= base_url('peserta') ?>" class="nav-link">
+                           <i class="nav-icon fas fa-user"></i>
                            <p>
                                Peserta
                            </p>
