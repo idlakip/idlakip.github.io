@@ -40,7 +40,12 @@ class Login extends BaseController
 
     public function logout()
     {
-        session()->destroy();
+        // session()->destroy();
+        session()->setTempdata('username');
+        session()->setTempdata('nama_user');
+        session()->setTempdata('level');
+
+        session()->getFlashdata('logout', 'Anda berhasil Logout !!!');
         return redirect()->to(base_url('login'));
     }
 }

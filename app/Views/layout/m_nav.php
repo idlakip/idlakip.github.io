@@ -41,7 +41,57 @@
                            </li>
                        </ul>
                    </li>
-                   <!-- <li class="nav-item">
+
+                   <?php
+                    if (session()->get('level') == 1) { ?>
+
+                       <li class="nav-item">
+                           <a href="<?= base_url('uploads') ?>" class="nav-link">
+                               <i class="nav-icon fas fa-desktop"></i>
+                               <p>
+                                   Multi Uploads
+                               </p>
+                           </a>
+                       </li>
+
+                       <li class="nav-item">
+                           <a href="<?= base_url('daftar') ?>" class="nav-link">
+                               <i class="nav-icon fas fa-users"></i>
+                               <p>
+                                   Input Pendaftar
+                               </p>
+                           </a>
+                       </li>
+
+                       <li class="nav-item">
+                           <a href="<?= base_url('peserta') ?>" class="nav-link">
+                               <i class="nav-icon fas fa-user"></i>
+                               <p>
+                                   Peserta
+                               </p>
+                           </a>
+                       </li>
+
+                   <?php } ?>
+
+
+                   <li class="nav-item">
+                       <a href="<?= base_url('product') ?>" class="nav-link">
+                           <i class="nav-icon fa fa-edit"></i>
+                           <p>
+                               Product
+                           </p>
+                       </a>
+                   </li>
+                   <li class="nav-item">
+                       <a href="<?= base_url('upload') ?>" class="nav-link">
+                           <i class="nav-icon fas fa-upload"></i>
+                           <p>
+                               Upload
+                           </p>
+                       </a>
+                   </li>
+                   <li class="nav-item">
                        <a href="<?= base_url('pages/menu1') ?>" class="nav-link">
                            <i class="nav-icon fas fa-th"></i>
                            <p>
@@ -72,49 +122,9 @@
                                Menu 4
                            </p>
                        </a>
-                   </li> -->
-                   <li class="nav-item">
-                       <a href="<?= base_url('product') ?>" class="nav-link">
-                           <i class="nav-icon fa fa-edit"></i>
-                           <p>
-                               Product
-                           </p>
-                       </a>
-                   </li>
-                   <li class="nav-item">
-                       <a href="<?= base_url('daftar') ?>" class="nav-link">
-                           <i class="nav-icon fas fa-users"></i>
-                           <p>
-                               Input Pendaftar
-                           </p>
-                       </a>
                    </li>
 
-                   <li class="nav-item">
-                       <a href="<?= base_url('peserta') ?>" class="nav-link">
-                           <i class="nav-icon fas fa-user"></i>
-                           <p>
-                               Peserta
-                           </p>
-                       </a>
-                   </li>
 
-                   <li class="nav-item">
-                       <a href="<?= base_url('upload') ?>" class="nav-link">
-                           <i class="nav-icon fas fa-upload"></i>
-                           <p>
-                               Upload
-                           </p>
-                       </a>
-                   </li>
-                   <li class="nav-item">
-                       <a href="<?= base_url('uploads') ?>" class="nav-link">
-                           <i class="nav-icon fas fa-desktop"></i>
-                           <p>
-                               Multi Uploads
-                           </p>
-                       </a>
-                   </li>
                    <li class="nav-item">
                        <a href="<?= base_url('login/logout') ?>" class="nav-link">
                            <i class="nav-icon fas fa-sign-out-alt"></i>

@@ -31,15 +31,17 @@
                 <p class="login-box-msg">Sign in to start your session</p>
                 <?php if (!empty(session()->getFlashdata('gagal'))) { ?>
                     <div class="alert alert-warning">
-                        <?php
-                        echo session()->getFlashdata('gagal');
-                        ?>
+                        <?php echo session()->getFlashdata('gagal'); ?>
+                    </div>
+                <?php } ?>
+                <?php if (!empty(session()->getFlashdata('logout'))) { ?>
+                    <div class="alert alert-success">
+                        <?php echo session()->getFlashdata('logout'); ?>
                     </div>
                 <?php } ?>
 
-                <?php
-                echo form_open('login/cek_login')
-                ?>
+                <?php echo form_open('login/cek_login') ?>
+
                 <div class="input-group mb-3">
                     <input type="text" name="username" class="form-control" placeholder="Username" required>
                     <div class="input-group-append">
