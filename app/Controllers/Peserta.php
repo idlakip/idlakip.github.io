@@ -11,11 +11,23 @@ class Peserta extends BaseController
 
     public function __construct()
     {
+        // Auth
+        if (session()->get('username') == '') {
+            session()->getFlashdata('gagal', 'Anda belum login !!!');
+            return redirect()->to(base_url('login'));
+        }
+        // end Auth
         $this->PesertaModel = new PesertaModel();
     }
 
     public function index()
     {
+        // Auth
+        if (session()->get('username') == '') {
+            session()->getFlashdata('gagal', 'Anda belum login !!!');
+            return redirect()->to(base_url('login'));
+        }
+        // end Auth
         $data = [
             'title' => 'Data Peserta',
             'rekap' => $this->PesertaModel->get_peserta(),

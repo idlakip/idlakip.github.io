@@ -103,8 +103,9 @@
                     <span class="dropdown-header">15 Notifications</span>
                     <div class="dropdown-divider"></div>
                     <a href="#" class="dropdown-item">
-                        <i class="fas fa-envelope mr-2"></i> 4 new messages
+                        <i class="fas fa-envelope mr-2"></i> <?= date('d M Y') ?>
                         <span class="float-right text-muted text-sm">3 mins</span>
+                        <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
                     </a>
                     <div class="dropdown-divider"></div>
                     <a href="#" class="dropdown-item">
@@ -132,5 +133,5 @@
         <!-- Brand Logo -->
         <a href="<?= base_url('pages') ?>" class="brand-link">
             <img src="<?= base_url() ?>/templates/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-            <span class="brand-text font-weight-light">Admin LAKIP</span>
+            <span class="brand-text font-weight-light"> LAKIP </span>
         </a>

@@ -23,15 +23,18 @@
 <body class="hold-transition login-page">
     <div class="login-box">
         <div class="login-logo">
-            <a href="<?= base_url() ?>/templates/index2.html"><b>Admin</b>Login</a>
+            <a href="<?= base_url() ?>/templates/index2.html"><b>LAKIP</b>Login</a>
         </div>
         <!-- /.login-logo -->
         <div class="card">
             <div class="card-body login-card-body">
-                <p class="login-box-msg">Sign in to start your session</p>
+                <!-- <p class="login-box-msg"> -->
+                <!-- </p> -->
                 <?php if (!empty(session()->getFlashdata('gagal'))) { ?>
                     <div class="alert alert-warning">
-                        <?php echo session()->getFlashdata('gagal'); ?>
+                        <?php
+                        echo session()->getFlashdata('gagal');
+                        ?>
                     </div>
                 <?php } ?>
                 <?php if (!empty(session()->getFlashdata('logout'))) { ?>
@@ -39,7 +42,6 @@
                         <?php echo session()->getFlashdata('logout'); ?>
                     </div>
                 <?php } ?>
-
                 <?php echo form_open('login/cek_login') ?>
 
                 <div class="input-group mb-3">

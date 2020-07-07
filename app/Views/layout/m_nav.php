@@ -12,7 +12,8 @@
                                 echo 'Admin';
                             } else {
                                 echo 'User';
-                            }; ?></a></span>
+                            }; ?></a>
+                   </span>
                </div>
            </div>
 
@@ -42,47 +43,7 @@
                        </ul>
                    </li>
 
-                   <?php
-                    if (session()->get('level') == 1) { ?>
 
-                       <li class="nav-item">
-                           <a href="<?= base_url('uploads') ?>" class="nav-link">
-                               <i class="nav-icon fas fa-desktop"></i>
-                               <p>
-                                   Multi Uploads
-                               </p>
-                           </a>
-                       </li>
-
-                       <li class="nav-item">
-                           <a href="<?= base_url('daftar') ?>" class="nav-link">
-                               <i class="nav-icon fas fa-users"></i>
-                               <p>
-                                   Input Pendaftar
-                               </p>
-                           </a>
-                       </li>
-
-                       <li class="nav-item">
-                           <a href="<?= base_url('peserta') ?>" class="nav-link">
-                               <i class="nav-icon fas fa-user"></i>
-                               <p>
-                                   Peserta
-                               </p>
-                           </a>
-                       </li>
-
-                   <?php } ?>
-
-
-                   <li class="nav-item">
-                       <a href="<?= base_url('product') ?>" class="nav-link">
-                           <i class="nav-icon fa fa-edit"></i>
-                           <p>
-                               Product
-                           </p>
-                       </a>
-                   </li>
                    <li class="nav-item">
                        <a href="<?= base_url('upload') ?>" class="nav-link">
                            <i class="nav-icon fas fa-upload"></i>
@@ -92,18 +53,18 @@
                        </a>
                    </li>
                    <li class="nav-item">
-                       <a href="<?= base_url('pages/menu1') ?>" class="nav-link">
+                       <a href="<?= base_url('home') ?>" class="nav-link">
                            <i class="nav-icon fas fa-th"></i>
                            <p>
-                               Menu 1
+                               Home
                            </p>
                        </a>
                    </li>
                    <li class="nav-item">
-                       <a href="<?= base_url('pages/menu2') ?>" class="nav-link">
+                       <a href="<?= base_url('home/halaman2') ?>" class="nav-link">
                            <i class="nav-icon fas fa-desktop"></i>
                            <p>
-                               Menu 2
+                               halaman 2
                            </p>
                        </a>
                    </li>
@@ -122,6 +83,67 @@
                                Menu 4
                            </p>
                        </a>
+                   </li>
+
+                   <li class="nav-item has-treeview menu-close">
+                       <a href="#" class="nav-link">
+                           <i class="nav-icon fas fa-th"></i>
+                           Menu
+                           <!-- <i class="right fas fa-angle-left"></i> -->
+                           <!-- administrator -->
+                           <?php if (session()->get('level') == 1) {
+                                echo 'Admin';
+                            } else {
+                                echo 'User';
+                            }; ?>
+                           <!-- administrator -->
+                       </a>
+
+                       <ul class="nav nav-treeview">
+
+                           <li class="nav-item">
+                               <a href="<?= base_url('product') ?>" class="nav-link">
+                                   <i class="nav-icon fas fa-desktop"></i>
+                                   <p>
+                                       Product
+                                   </p>
+                               </a>
+                           </li>
+                           <!-- admin menu -->
+                           <?php
+                            if (session()->get('level') == 1) { ?>
+                               <li class="nav-item">
+                                   <a href="<?= base_url('uploads') ?>" class="nav-link">
+                                       <i class="nav-icon fas fa-desktop"></i>
+                                       <p>
+                                           Multi Uploads
+                                       </p>
+                                   </a>
+                               </li>
+
+                               <li class="nav-item">
+                                   <a href="<?= base_url('daftar') ?>" class="nav-link">
+                                       <i class="nav-icon fas fa-users"></i>
+                                       <p>
+                                           Input Pendaftar
+                                       </p>
+                                   </a>
+                               </li>
+
+                               <li class="nav-item">
+                                   <a href="<?= base_url('peserta') ?>" class="nav-link">
+                                       <i class="nav-icon fas fa-user"></i>
+                                       <p>
+                                           Peserta
+                                       </p>
+                                   </a>
+                               </li>
+
+
+                           <?php } ?>
+                           <!-- End admin menu -->
+
+                       </ul>
                    </li>
 
 

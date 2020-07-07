@@ -6,15 +6,29 @@ use App\Models\DaftarModel;
 
 class Daftar extends BaseController
 {
+
     // protected $DaftarModel;
     public function __construct()
     {
+        // Auth
+        if (session()->get('username') == '') {
+            session()->getFlashdata('gagal', 'Anda belum login !!!');
+            return redirect()->to(base_url('login'));
+        }
+        // end Auth
+
         helper('form');
         $this->DaftarModel = new DaftarModel();
     }
 
     public function index()
     {
+        // Auth
+        if (session()->get('username') == '') {
+            session()->getFlashdata('gagal', 'Anda belum login !!!');
+            return redirect()->to(base_url('login'));
+        }
+        // end Auth
         $data = array(
             'title' => 'Input Peserta',
             'isi' => 'daftar/m_validation'
@@ -25,6 +39,12 @@ class Daftar extends BaseController
     //--------------------------------------------------------------------
     public function save()
     {
+        // Auth
+        if (session()->get('username') == '') {
+            session()->getFlashdata('gagal', 'Anda belum login !!!');
+            return redirect()->to(base_url('login'));
+        }
+        // end Auth
         $validation = \Config\Services::validation();
         // mengambil file upload
         $image = $this->request->getFile('photo');

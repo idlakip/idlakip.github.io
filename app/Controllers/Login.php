@@ -33,7 +33,7 @@ class Login extends BaseController
             return redirect()->to(base_url('home'));
         } else {
             // Jika username dan password salah 
-            session()->getFlashdata('gagal', 'Username atau Password Salah !!!');
+            session()->setFlashdata('gagal', 'Username atau Password Salah !!!');
             return redirect()->to(base_url('login'));
         }
     }
@@ -41,11 +41,11 @@ class Login extends BaseController
     public function logout()
     {
         // session()->destroy();
-        session()->setTempdata('username');
-        session()->setTempdata('nama_user');
-        session()->setTempdata('level');
+        session()->remove('username');
+        session()->remove('nama_user');
+        session()->remove('level');
 
-        session()->getFlashdata('logout', 'Anda berhasil Logout !!!');
+        session()->setFlashdata('logout', 'Anda berhasil Logout !!!');
         return redirect()->to(base_url('login'));
     }
 }
