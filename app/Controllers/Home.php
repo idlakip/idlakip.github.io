@@ -6,6 +6,11 @@ class Home extends BaseController
 {
 	public function index()
 	{
+		if (session()->get('username') == '') {
+			session()->getFlashdata('gagal', 'Anda belum login !!!');
+			return redirect()->to(base_url('login'));
+		}
+
 		$data = [
 			'title' => 'Home',
 			'isi' => 'v/v_home'
@@ -16,6 +21,12 @@ class Home extends BaseController
 	//--------------------------------------------------------------------
 	public function halaman2()
 	{
+		// Auth 
+		if (session()->get('username') == '') {
+			session()->getFlashdata('gagal', 'Anda belum login !!!');
+			return redirect()->to(base_url('login'));
+		}
+		// end Auth
 		$data = [
 			'title' => 'Halaman 2',
 			'isi' => 'v/v_halaman2'

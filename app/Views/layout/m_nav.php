@@ -6,7 +6,13 @@
                    <img src="<?= base_url() ?>/templates/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
                </div>
                <div class="info">
-                   <a href="#" class="d-block">Masrianto</a>
+                   <a href="#" class="d-block"><?= session()->get('nama_user'); ?>
+                       <span class="right badge badge-danger">
+                           <?php if (session()->get('level') == 1) {
+                                echo 'Admin';
+                            } else {
+                                echo 'User';
+                            }; ?></a></span>
                </div>
            </div>
 
@@ -106,6 +112,14 @@
                            <i class="nav-icon fas fa-desktop"></i>
                            <p>
                                Multi Uploads
+                           </p>
+                       </a>
+                   </li>
+                   <li class="nav-item">
+                       <a href="<?= base_url('login/logout') ?>" class="nav-link">
+                           <i class="nav-icon fas fa-sign-out-alt"></i>
+                           <p>
+                               Logout
                            </p>
                        </a>
                    </li>
