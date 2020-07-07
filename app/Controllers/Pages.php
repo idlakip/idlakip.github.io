@@ -6,6 +6,12 @@ class Pages extends BaseController
 {
     public function index()
     {
+        // Auth
+        if (session()->get('username') == '') {
+            session()->getFlashdata('gagal', 'Anda belum login !!!');
+            return redirect()->to(base_url('login'));
+        }
+        // end Auth
         $data = [
             'title' => 'Pages',
             'isi' => 'p/p_pages'
@@ -16,6 +22,12 @@ class Pages extends BaseController
     //--------------------------------------------------------------------
     public function pages2()
     {
+        // Auth
+        if (session()->get('username') == '') {
+            session()->getFlashdata('gagal', 'Anda belum login !!!');
+            return redirect()->to(base_url('login'));
+        }
+        // end Auth
         $data = [
             'title' => 'pages 2',
             'isi' => 'p/p_pages_2'
@@ -27,6 +39,12 @@ class Pages extends BaseController
 
     public function pages3()
     {
+        // Auth
+        if (session()->get('username') == '') {
+            session()->getFlashdata('gagal', 'Anda belum login !!!');
+            return redirect()->to(base_url('login'));
+        }
+        // end Auth
         $data = [
             'title' => 'pages 3',
             'isi' => 'p/p_pages_3'
@@ -38,6 +56,12 @@ class Pages extends BaseController
 
     public function pages4()
     {
+        // Auth
+        if (session()->get('username') == '') {
+            session()->getFlashdata('gagal', 'Anda belum login !!!');
+            return redirect()->to(base_url('login'));
+        }
+        // end Auth
         $data = [
             'title' => 'pages 4',
             'isi' => 'p/p_pages_4'
@@ -49,6 +73,12 @@ class Pages extends BaseController
 
     public function menu1()
     {
+        // Auth
+        if (session()->get('username') == '') {
+            session()->getFlashdata('gagal', 'Anda belum login !!!');
+            return redirect()->to(base_url('login'));
+        }
+        // end Auth
         $data = [
             'title' => 'Menu 1',
             'isi' => 'menu/n_menu1'
@@ -60,6 +90,12 @@ class Pages extends BaseController
 
     public function menu2()
     {
+        // Auth
+        if (session()->get('username') == '') {
+            session()->getFlashdata('gagal', 'Anda belum login !!!');
+            return redirect()->to(base_url('login'));
+        }
+        // end Auth
         $data = [
             'title' => 'Menu 2',
             'isi' => 'menu/n_menu2'
@@ -71,6 +107,12 @@ class Pages extends BaseController
 
     public function menu3()
     {
+        // Auth
+        if (session()->get('username') == '') {
+            session()->getFlashdata('gagal', 'Anda belum login !!!');
+            return redirect()->to(base_url('login'));
+        }
+        // end Auth
         $data = [
             'title' => 'Menu 3',
             'isi' => 'menu/n_menu3'
@@ -81,6 +123,12 @@ class Pages extends BaseController
     //--------------------------------------------------------------------
     public function menu4()
     {
+        // Auth
+        if (session()->get('username') == '') {
+            session()->getFlashdata('gagal', 'Anda belum login !!!');
+            return redirect()->to(base_url('login'));
+        }
+        // end Auth
         $data = [
             'title' => 'Product',
             'isi' => 'menu/n_menu4'

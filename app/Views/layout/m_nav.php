@@ -6,7 +6,14 @@
                    <img src="<?= base_url() ?>/templates/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
                </div>
                <div class="info">
-                   <a href="#" class="d-block">Masrianto</a>
+                   <a href="#" class="d-block"><?= session()->get('nama_user'); ?>
+                       <span class="right badge badge-danger">
+                           <?php if (session()->get('level') == 1) {
+                                echo 'Admin';
+                            } else {
+                                echo 'User';
+                            }; ?></a>
+                   </span>
                </div>
            </div>
 
@@ -35,19 +42,29 @@
                            </li>
                        </ul>
                    </li>
+
+
                    <li class="nav-item">
-                       <a href="<?= base_url('pages/menu1') ?>" class="nav-link">
-                           <i class="nav-icon fas fa-th"></i>
+                       <a href="<?= base_url('upload') ?>" class="nav-link">
+                           <i class="nav-icon fas fa-upload"></i>
                            <p>
-                               Menu 1
+                               Upload
                            </p>
                        </a>
                    </li>
                    <li class="nav-item">
-                       <a href="<?= base_url('pages/menu2') ?>" class="nav-link">
+                       <a href="<?= base_url('home') ?>" class="nav-link">
+                           <i class="nav-icon fas fa-th"></i>
+                           <p>
+                               Home
+                           </p>
+                       </a>
+                   </li>
+                   <li class="nav-item">
+                       <a href="<?= base_url('home/halaman2') ?>" class="nav-link">
                            <i class="nav-icon fas fa-desktop"></i>
                            <p>
-                               Menu 2
+                               halaman 2
                            </p>
                        </a>
                    </li>
@@ -67,37 +84,74 @@
                            </p>
                        </a>
                    </li>
-                   <li class="nav-item">
-                       <a href="<?= base_url('product') ?>" class="nav-link">
-                           <i class="nav-icon fa fa-edit"></i>
-                           <p>
-                               Product
-                           </p>
+
+                   <li class="nav-item has-treeview menu-close">
+                       <a href="#" class="nav-link">
+                           <i class="nav-icon fas fa-th"></i>
+                           Menu
+                           <!-- <i class="right fas fa-angle-left"></i> -->
+                           <!-- administrator -->
+                           <?php if (session()->get('level') == 1) {
+                                echo 'Admin';
+                            } else {
+                                echo 'User';
+                            }; ?>
+                           <!-- administrator -->
                        </a>
-                   </li>
-                   <li class="nav-item">
-                       <a href="<?= base_url('daftar') ?>" class="nav-link">
-                           <i class="nav-icon fas fa-users"></i>
-                           <p>
-                               Input Pendaftar
-                           </p>
-                       </a>
+
+                       <ul class="nav nav-treeview">
+
+                           <li class="nav-item">
+                               <a href="<?= base_url('product') ?>" class="nav-link">
+                                   <i class="nav-icon fas fa-desktop"></i>
+                                   <p>
+                                       Product
+                                   </p>
+                               </a>
+                           </li>
+                           <!-- admin menu -->
+                           <?php
+                            if (session()->get('level') == 1) { ?>
+                               <li class="nav-item">
+                                   <a href="<?= base_url('uploads') ?>" class="nav-link">
+                                       <i class="nav-icon fas fa-desktop"></i>
+                                       <p>
+                                           Multi Uploads
+                                       </p>
+                                   </a>
+                               </li>
+
+                               <li class="nav-item">
+                                   <a href="<?= base_url('daftar') ?>" class="nav-link">
+                                       <i class="nav-icon fas fa-users"></i>
+                                       <p>
+                                           Input Pendaftar
+                                       </p>
+                                   </a>
+                               </li>
+
+                               <li class="nav-item">
+                                   <a href="<?= base_url('peserta') ?>" class="nav-link">
+                                       <i class="nav-icon fas fa-user"></i>
+                                       <p>
+                                           Peserta
+                                       </p>
+                                   </a>
+                               </li>
+
+
+                           <?php } ?>
+                           <!-- End admin menu -->
+
+                       </ul>
                    </li>
 
-                   <li class="nav-item">
-                       <a href="<?= base_url('peserta') ?>" class="nav-link">
-                           <i class="nav-icon fas fa-user"></i>
-                           <p>
-                               Peserta
-                           </p>
-                       </a>
-                   </li>
 
                    <li class="nav-item">
-                       <a href="<?= base_url('upload') ?>" class="nav-link">
-                           <i class="nav-icon fas fa-upload"></i>
+                       <a href="<?= base_url('login/logout') ?>" class="nav-link">
+                           <i class="nav-icon fas fa-sign-out-alt"></i>
                            <p>
-                               Upload
+                               Logout
                            </p>
                        </a>
                    </li>

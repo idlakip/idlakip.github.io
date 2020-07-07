@@ -1,8 +1,4 @@
 <!DOCTYPE html>
-<!--
-This is a starter template page. Use this page to start your new project from
-scratch. This page gets rid of all links and provides the needed markup only.
--->
 <html lang="en">
 
 <head>
@@ -35,4 +31,17 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
 
-<body class="hold-transition sidebar-mini">
+<!-- <body class="hold-transition sidebar-mini"> -->
+<!-- <body class="hold-transition sidebar-mini layout-fixed"> -->
+
+<body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
+
+    <!-- <body class="hold-transition sidebar-mini"> -->
+
+    <!-- <body class="hold-transition sidebar-mini layout-footer-fixed"> -->
+
+    <!-- <body class="hold-transition sidebar-mini layout-navbar-fixed"> -->
+
+    <!-- <body class="hold-transition sidebar-mini sidebar-collapse layout-footer-fixed"> -->
+
+    <!-- <body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed"> -->

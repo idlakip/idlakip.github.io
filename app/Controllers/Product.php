@@ -11,11 +11,23 @@ class Product extends BaseController
 
     public function __construct()
     {
+        // Auth
+        if (session()->get('username') == '') {
+            session()->getFlashdata('gagal', 'Anda belum login !!!');
+            return redirect()->to(base_url('login'));
+        }
+        // end Auth
         $this->ProductModel = new ProductModel();
     }
 
     public function index()
     {
+        // Auth
+        if (session()->get('username') == '') {
+            session()->getFlashdata('gagal', 'Anda belum login !!!');
+            return redirect()->to(base_url('login'));
+        }
+        // end Auth
         $data = [
             'title' => 'Data Product',
             'product' => $this->ProductModel->get_product(),
@@ -26,6 +38,12 @@ class Product extends BaseController
 
     public function tambah()
     {
+        // Auth
+        if (session()->get('username') == '') {
+            session()->getFlashdata('gagal', 'Anda belum login !!!');
+            return redirect()->to(base_url('login'));
+        }
+        // end Auth
         $data = [
             'title' => 'Tambah Data Product',
             'isi' => 'product/v_add'
@@ -35,6 +53,12 @@ class Product extends BaseController
 
     public function save()
     {
+        // Auth
+        if (session()->get('username') == '') {
+            session()->getFlashdata('gagal', 'Anda belum login !!!');
+            return redirect()->to(base_url('login'));
+        }
+        // end Auth
         $data = [
             'product_name' => $this->request->getPost('product_name'),
             'product_description' => $this->request->getPost('product_description'),
@@ -48,6 +72,12 @@ class Product extends BaseController
 
     public function edit($product_id)
     {
+        // Auth
+        if (session()->get('username') == '') {
+            session()->getFlashdata('gagal', 'Anda belum login !!!');
+            return redirect()->to(base_url('login'));
+        }
+        // end Auth
         $data = [
             'title' => 'Edit Data Product',
             'product' => $this->ProductModel->edit_product($product_id),
@@ -58,6 +88,12 @@ class Product extends BaseController
 
     public function update($product_id)
     {
+        // Auth
+        if (session()->get('username') == '') {
+            session()->getFlashdata('gagal', 'Anda belum login !!!');
+            return redirect()->to(base_url('login'));
+        }
+        // end Auth
         $data = [
             'product_name' => $this->request->getPost('product_name'),
             'product_description' => $this->request->getPost('product_description'),
@@ -71,6 +107,12 @@ class Product extends BaseController
 
     public function delete($product_id)
     {
+        // Auth
+        if (session()->get('username') == '') {
+            session()->getFlashdata('gagal', 'Anda belum login !!!');
+            return redirect()->to(base_url('login'));
+        }
+        // end Auth
         $this->ProductModel->delete_product($product_id);
         session()->setFlashdata('success', 'Data berhasil dihapus!!!');
         return redirect()->to(base_url('product'));
