@@ -32,7 +32,7 @@ class Berita extends BaseController
         // end Auth
         $data = [
             'title' => 'Data Berita',
-            'berita' => $this->BeritaModel->paginate(2),
+            'berita' => $this->BeritaModel->paginate(5, 'berita'),
             'pager' => $this->BeritaModel->pager,
             'isi' => 'berita/v_berita'
         ];

@@ -79,6 +79,27 @@
         });
     })
 </script>
+<script type="text/javascript">
+    jQuery(function($) {
+        $.supersized({
+            transition: 6,
+            keyboard_nav: 0,
+            start_slide: 0,
+            vertical_center: 1,
+            horizontal_center: 1,
+            min_width: 1000,
+            min_height: 700,
+            fit_portrait: 0,
+            fit_landscape: 1,
+            image_protect: 1,
+            slides: [{
+                    image: '<?= base_url() ?>/images/indonesia.jpg'
+                },
+
+            ]
+        });
+    });
+</script>
 </body>
 
 </html>

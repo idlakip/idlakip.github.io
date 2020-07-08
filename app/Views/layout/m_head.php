@@ -33,6 +33,7 @@
     <link rel="stylesheet" href="<?= base_url() ?>/templates/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
     <!-- MyCSS style -->
     <link rel="stylesheet" href="<?= base_url() ?>/css/style.css">
+    <link rel="stylesheet" href="<?= base_url() ?>/js/supersized.core.css">
     <!-- Ekko Lightbox -->
     <link rel="stylesheet" href="<?= base_url() ?>/templates/plugins/ekko-lightbox/ekko-lightbox.css">
     <!-- Ionicons -->

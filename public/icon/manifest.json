@@ -3,7 +3,7 @@
   "short_name": "LKP",
   "icons": [
     {
-      "src": "/icon/images/touch/apple-icon-144x144.png",
+      "src": "/images/touch/apple-icon-144x144.png",
       "sizes": "144x144",
       "type": "image/png"
     },

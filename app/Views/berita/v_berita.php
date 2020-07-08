@@ -1,12 +1,5 @@
 <div class="col-sm-12">
-    <a href="<?= base_url('berita/tambah'); ?>" class="btn btn-sm btn-primary my-3">Tambah Data</a>
-    <?php
-    if (!empty(session()->getFlashdata('success'))) { ?>
 
-        <div class="alert alert-success">
-            <?= session()->getFlashdata('success'); ?>
-        </div>
-    <?php  }; ?>
 
 
 
@@ -17,19 +10,19 @@
                     <div class="card-header">
                         <h3 class="card-title">
                             <i class="fas fa-text-width"></i>
-                            Unordered List
+                            <?= $value['judul']; ?>
                         </h3>
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
                         <ul>
-                            <li>Lorem ipsum dolor sit amet</li>
+                            <li><?= $value['isi_berita']; ?></li>
 
                         </ul>
                     </div>
                     <!-- /.card-body -->
                 </div>
-
             </div>
         <?php } ?>
-        <?php $pager->links(); ?>
+
+        <?php echo $pager->links('berita', 'paging'); ?>
