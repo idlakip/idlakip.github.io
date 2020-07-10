@@ -77,10 +77,10 @@
                        </a>
                    </li>
                    <li class="nav-item">
-                       <a href="<?= base_url('pages/menu4') ?>" class="nav-link">
-                           <i class="nav-icon fas fa-th"></i>
+                       <a href="<?= base_url('berita') ?>" class="nav-link">
+                           <i class="nav-icon far fa-newspaper"></i>
                            <p>
-                               Menu 4
+                               Berita
                            </p>
                        </a>
                    </li>
